@@ -11,8 +11,7 @@ def get_pokedex(df=df, sorted_=True):
         return pokedex
     
 def get_poke_image(name, df=df):
-    poke_id = df[df.name == name].index[0]+1
-    image_path = "data/pokemon_images/{}.png".format(poke_id)
+    image_path = "data/pokemon_images/{}.png".format(name.lower().replace(" ", "-"))
     return image_path
 
 def catch_phrase(name):
